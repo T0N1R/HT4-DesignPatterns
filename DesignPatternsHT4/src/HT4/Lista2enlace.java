@@ -1,13 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package HT4;
 
-/**
- *
- * @author Antonio
+/*
+- * Universidad del VAlle de Guatemala	
+- * Guatemala 14 de febrero 2018	
+- * Algoritmos y Estructura de Datos	
+- * Hoja de Trabajo 4	
+- * El objetivo de esta Hoja de Trabajo es realizar una calculadora para evaluar	
+- * expresiones postfix.	
+- * @author Antonio #17273	
+- * @author Andres Perez #	
  */
 public class Lista2enlace {
     
