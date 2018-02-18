@@ -15,7 +15,7 @@ package HT4;
  *
  * @author Antonio Reyes, Hector Miguel Valle, Rodrigo Samayoa
  */
-public class Calculadora implements CalculadoraI {
+public class Calculadora /*implements CalculadoraI*/ {
     /**
      * metodo calcular. se utiliza para poder realizar operaciones escritas en postfix
      * @param esp
@@ -29,6 +29,9 @@ public class Calculadora implements CalculadoraI {
         
         String[] cadena = esp.split(" ");
         String caracter;
+        
+        Factory fact = new Factory();
+        int res;
         
         // Metemos al stack los elementos en orden inverso.
         for(int i= cadena.length - 1; i >= 0; i--){
@@ -76,7 +79,7 @@ public class Calculadora implements CalculadoraI {
                     }
                 }
             }
-           
+            
         }
         
         

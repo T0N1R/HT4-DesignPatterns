@@ -13,4 +13,11 @@ package HT4;
  */
 public class Factory {
     
+     int calcFactory(StackVector<String> pila, StackVector<Integer> evaluador, Boolean error){
+        int res = 0;
+        
+        
+        
+        return res;
+    }
 }
