@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         // TODO code application logic here
         Calculadora main = new Calculadora();
-        File opera = new File("C:/Users/Antonio/Documents/NetBeansProjects/calculadora/CalculadoraHT2/src/prueba.txt");
+        File opera = new File("C:\\Users\\Andres\\Documents\\GitHub\\HT4-DesignPatterns\\DesignPatternsHT4\\src\\HT4\\prueba.txt");
         FileReader leer = new FileReader(opera);
         BufferedReader buff = new BufferedReader(leer);
         
