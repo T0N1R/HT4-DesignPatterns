@@ -13,11 +13,57 @@ package HT4;
  */
 public class Factory {
     
-     int calcFactory(StackVector<String> pila, StackVector<Integer> evaluador, Boolean error){
-        int res = 0;
+     void calcFactory(StackVector<String> pila, StackVector<Integer> evaluador, Boolean error){
+         
+         Operaciones oper = null;
+         
         
+        String caracter;
+        while(!pila.empty()){
+        if ("0123456789".contains(pila.peek())) {
+                // Si el peek() es un numero
+                evaluador.push(Integer.parseInt(pila.pop()));
+            } else {
+                // Si no es un numero
+                caracter = pila.pop();
+                switch (caracter.charAt(0)) {
+                    case '+': {
+                        // Suma.
+                        oper = new Operaciones();
+                        evaluador.push(oper.Suma(evaluador.pop(), evaluador.pop()));
+                        break;
+                    }
+                    case '-': {
+                        // Resta.
+                        oper = new Operaciones();
+                        evaluador.push(oper.Resta(evaluador.pop(), evaluador.pop()));
+                        break;
+                    }
+                    case '*': {
+                        // Multiplicacion.
+                        oper = new Operaciones();
+                        evaluador.push(oper.Multiplicacion(evaluador.pop(), evaluador.pop()));
+                        break;
+                    }
+                    case '/': {
+                        // Division.
+                        int numerador = evaluador.pop();
+                        int denominador = evaluador.pop();
+                        // Evaluamos si no hay un error.
+                        if (denominador != 0) {
+                            // No hay error.
+                            oper = new Operaciones();
+                        evaluador.push(oper.Division(evaluador.pop(), evaluador.pop()));
+                        } else {
+                            // Hay error, si el 0 esta en el denominador, no hay solucion
+                            error = true;
+                            evaluador.push(0);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
         
-        
-        return res;
     }
 }

@@ -15,7 +15,7 @@ package HT4;
  *
  * @author Antonio Reyes, Hector Miguel Valle, Rodrigo Samayoa
  */
-public class Calculadora /*implements CalculadoraI*/ {
+public abstract class Calculadora implements CalculadoraI {
     /**
      * metodo calcular. se utiliza para poder realizar operaciones escritas en postfix
      * @param esp
@@ -39,48 +39,7 @@ public class Calculadora /*implements CalculadoraI*/ {
             pila.push(caracter);
         }
         
-        while (!pila.empty()) {
-            if ("0123456789".contains(pila.peek())) {
-                // Si el peek() es un numero
-                evaluador.push(Integer.parseInt(pila.pop()));
-            } else {
-                // Si no es un numero
-                caracter = pila.pop();
-                switch (caracter.charAt(0)) {
-                    case '+': {
-                        // Suma.
-                        evaluador.push((evaluador.pop() + evaluador.pop()));
-                        break;
-                    }
-                    case '-': {
-                        // Resta.
-                        evaluador.push((evaluador.pop() - evaluador.pop()));
-                        break;
-                    }
-                    case '*': {
-                        // Multiplicacion.
-                        evaluador.push((evaluador.pop() * evaluador.pop()));
-                        break;
-                    }
-                    case '/': {
-                        // Division.
-                        int numerador = evaluador.pop();
-                        int denominador = evaluador.pop();
-                        // Evaluamos si no hay un error.
-                        if (denominador != 0) {
-                            // No hay error.
-                            evaluador.push((numerador / denominador));
-                        } else {
-                            // Hay error, si el 0 esta en el denominador, no hay solucion
-                            error = true;
-                            evaluador.push(0);
-                        }
-                        break;
-                    }
-                }
-            }
-            
-        }
+        fact.calcFactory(pila, evaluador, error);
         
         
         if (!error) {
