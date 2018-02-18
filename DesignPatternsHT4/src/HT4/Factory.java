@@ -53,7 +53,7 @@ public class Factory {
                         if (denominador != 0) {
                             // No hay error.
                             oper = new Operaciones();
-                        evaluador.push(oper.Division(evaluador.pop(), evaluador.pop()));
+                            evaluador.push(oper.Division(evaluador.pop(), evaluador.pop()));
                         } else {
                             // Hay error, si el 0 esta en el denominador, no hay solucion
                             error = true;
