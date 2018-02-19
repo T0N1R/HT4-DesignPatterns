@@ -2,7 +2,7 @@ package HT4;
 
 /**
  *
- * @author USUARIO
+ * @author Antonio Reyes
  */
 import java.util.ArrayList;
 public class StackVector<E> implements Stack<E> {

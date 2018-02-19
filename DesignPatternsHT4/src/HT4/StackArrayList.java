@@ -8,6 +8,7 @@ package HT4;
 /**
  *
  * @author Antonio
+ * @author Andres Perez
  */
 import java.util.ArrayList;
 

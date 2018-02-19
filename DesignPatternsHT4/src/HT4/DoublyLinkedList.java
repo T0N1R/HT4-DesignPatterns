@@ -8,6 +8,7 @@ package HT4;
 /**
  *
  * @author Antonio
+ * @author Andres Perez
  */
 public class DoublyLinkedList<E> extends AbstractList<E>{
 protected int count;

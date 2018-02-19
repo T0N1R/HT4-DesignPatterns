@@ -4,6 +4,7 @@ package HT4;
 /**
  *
  * @author Antonio
+ * @author Andres Perez
  */
 public class SinglyLinkedList<E> extends AbstractList<E>
 {

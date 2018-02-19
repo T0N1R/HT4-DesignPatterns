@@ -8,7 +8,7 @@ package HT4;
 - * El objetivo de esta Hoja de Trabajo es realizar una calculadora para evaluar	
 - * expresiones postfix.	
 - * @author Antonio #17273	
-- * @author Andres Perez #	
+- * @author Andres Perez #16362	
  */
 
 /**
