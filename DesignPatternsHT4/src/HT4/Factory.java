@@ -29,20 +29,20 @@ public class Factory {
                 switch (caracter.charAt(0)) {
                     case '+': {
                         // Suma.
-                        oper = new Operaciones();
-                        evaluador.push(oper.Suma(evaluador.pop(), evaluador.pop()));
+                        //oper = new Operaciones();
+                        evaluador.push((evaluador.pop()+ evaluador.pop()));
                         break;
                     }
                     case '-': {
                         // Resta.
-                        oper = new Operaciones();
-                        evaluador.push(oper.Resta(evaluador.pop(), evaluador.pop()));
+                        //oper = new Operaciones();
+                        evaluador.push((evaluador.pop() - evaluador.pop()));
                         break;
                     }
                     case '*': {
                         // Multiplicacion.
-                        oper = new Operaciones();
-                        evaluador.push(oper.Multiplicacion(evaluador.pop(), evaluador.pop()));
+                        //oper = new Operaciones();
+                        evaluador.push((evaluador.pop() * evaluador.pop()));
                         break;
                     }
                     case '/': {
@@ -52,8 +52,8 @@ public class Factory {
                         // Evaluamos si no hay un error.
                         if (denominador != 0) {
                             // No hay error.
-                            oper = new Operaciones();
-                            evaluador.push(oper.Division(evaluador.pop(), evaluador.pop()));
+                            //oper = new Operaciones();
+                            evaluador.push((numerador / denominador));
                         } else {
                             // Hay error, si el 0 esta en el denominador, no hay solucion
                             error = true;

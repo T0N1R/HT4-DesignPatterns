@@ -15,7 +15,7 @@ package HT4;
  *
  * @author Antonio Reyes, Hector Miguel Valle, Rodrigo Samayoa
  */
-public abstract class Calculadora implements CalculadoraI {
+public class Calculadora implements CalculadoraI {
     /**
      * metodo calcular. se utiliza para poder realizar operaciones escritas en postfix
      * @param esp
