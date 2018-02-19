@@ -13,7 +13,7 @@ package HT4;
 
 /**
  *
- * @author Antonio Reyes, Hector Miguel Valle, Rodrigo Samayoa
+ * @author Antonio Reyes, Jorge andres
  */
 public class Calculadora implements CalculadoraI {
     /**

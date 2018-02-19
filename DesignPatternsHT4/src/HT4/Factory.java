@@ -13,4 +13,47 @@ package HT4;
  */
 public class Factory {
     
+    
+    StackFactory pila = new StackFactory();
+    FactoryLista listas = new FactoryLista();
+    
+    public void opcionRealizada(String opcion1, String opcion2){
+        switch(opcion1){
+            case "1":{
+                //Crea un ArrayList
+                pila.getStack("AL");
+                break;
+            }
+            
+            case "2":{
+                //Crea un StackVector
+                pila.getStack(" ");
+                break;
+            }
+            
+            case "3":{
+                switch(opcion2){
+                    case "1":{
+                        //crea lista simplemente enlazada
+                        listas.getList("1");
+                        break;
+                    }
+                    
+                    case "2":{
+                        //crea lista doblemente enlazada
+                        listas.getList("2");
+                        break;
+                    }
+                    
+                    case "3":{
+                        //crea lista circular
+                        listas.getList("3");
+                        break;
+                    }
+                }
+                
+                break;
+            }
+        }
+    }
 }
