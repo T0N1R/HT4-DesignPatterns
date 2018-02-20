@@ -13,4 +13,14 @@ package HT4;
  */
 public class Singlenton {
     
+    /*
+    public static Singlenton firstInstance = null;
+    
+    private Singlenton(){};
+    
+    public static Singlenton getInstance(){
+        
+    }
+    
+    */
 }

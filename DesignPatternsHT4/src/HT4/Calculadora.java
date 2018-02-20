@@ -10,18 +10,29 @@ package HT4;
 - * @author Antonio #17273	
 - * @author Andres Perez #16362	
  */
-
-/**
- *
- * @author Antonio Reyes, Jorge andres
- */
 public class Calculadora implements CalculadoraI {
+    
+    
+    //Primera instancia para el singleton
+    public static Calculadora firstInstance = null;
+    
+    public Calculadora(){}
     /**
      * metodo calcular. se utiliza para poder realizar operaciones escritas en postfix
      * @param esp
      * @return Valor de la operacion realizada
      */
     public String calcular(String esp){
+        
+        //IMPORTANTE
+        //IMPORTANTE
+        //IMPORTANTE
+        //IMPORTANTE
+        //Verificador para implementar el metodo singleton
+        if(firstInstance == null){
+            firstInstance = new Calculadora();
+        }
+        
         String respuesta = "";
         StackVector<String> pila = new StackVector<String>();
         StackVector<Integer> evaluador = new StackVector<Integer>();
